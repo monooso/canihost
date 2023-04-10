@@ -2,7 +2,7 @@ version: '3.8'
 name: canihost
 
 services:
-  canihost:
+  app:
     image: monooso/canihost:latest
     container_name: monooso-canihost
     restart: unless-stopped
