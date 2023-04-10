@@ -41,4 +41,10 @@ defmodule CanihostWeb.Router do
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end
+
+  scope "/" do
+    pipe_through :browser
+
+    live "/liveview_test", CanihostWeb.LiveviewTestLive
+  end
 end
