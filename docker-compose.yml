@@ -1,0 +1,15 @@
+version: '3.8'
+name: canihost
+
+services:
+  canihost:
+    image: canihost:latest
+    container_name: monooso/canihost
+    restart: unless-stopped
+    environment:
+      - DATABASE_PATH=${DATABASE_PATH}
+      - SECRET_KEY_BASE=${SECRET_KEY_BASE}
+      - LETSENCRYPT_HOST=canihost.stephenlewis.me
+      - VIRTUAL_HOST=canihost.stephenlewis.me
+      - VIRTUAL_PORT=4000
+    network_mode: bridge
