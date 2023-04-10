@@ -3,8 +3,8 @@ name: canihost
 
 services:
   canihost:
-    image: canihost:latest
-    container_name: monooso/canihost
+    image: monooso/canihost:latest
+    container_name: monooso-canihost
     restart: unless-stopped
     environment:
       - DATABASE_PATH=${DATABASE_PATH}

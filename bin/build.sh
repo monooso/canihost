@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker build --tag monooso/caniuse:latest .
+docker build --tag monooso/canihost:latest .
