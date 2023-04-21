@@ -35,6 +35,9 @@ canihost-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# Environment-specific files
+/docker.env
+
 # Database files
 *.db
 *.db-*
