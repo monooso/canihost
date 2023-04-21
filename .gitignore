@@ -36,7 +36,8 @@ npm-debug.log
 /assets/node_modules/
 
 # Environment-specific files
-/docker.env
+/app.env
+/db.env
 
 # Database files
 *.db

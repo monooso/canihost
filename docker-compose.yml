@@ -4,10 +4,10 @@ name: canihost
 services:
   app:
     image: monooso/canihost:latest
-    container_name: monooso-canihost
+    container_name: monooso-canihost-app
     restart: unless-stopped
     env_file:
-      - docker.env
+      - app.env
     environment:
       LETSENCRYPT_HOST: canihost.stephenlewis.me
       VIRTUAL_HOST: canihost.stephenlewis.me
@@ -15,6 +15,17 @@ services:
     networks:
       - canihost
       - flyby
+
+  db:
+    image: postgres:latest
+    container_name: monooso-canihost-db
+    restart: unless-stopped
+    env_file:
+      - db.env
+    networks:
+      - canihost
+    ports:
+      - "${TAILSCALE_IP}:5432:5432"
 
 networks:
   canihost:
